@@ -1,0 +1,530 @@
+body {
+    margin: 0;
+    min-width: 250px;
+    background-color:#888;
+    font-family: 'Roboto Slab', serif;
+  }
+  /* header navigation bar */
+  .navbar {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+  }
+  .navbar a.right {
+    float: right;
+    color: yellow;
+    font-size: x-large;
+    padding:8px;
+    margin-right: 8px;
+  }
+  .navbar a.right:hover {
+    background-color: #555;
+  }
+  .navbar a {
+    float: left;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .navbar a:hover {
+    background-color: #000;
+  }
+  
+  .active {
+    background-color: black;
+  }
+  
+  @media screen and (max-width: 500px) {
+    .navbar a {
+      float: none;
+      display: block;
+    }
+  }
+
+  /* signup */
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  /* Add a background color when the inputs get focus */
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Set a style for all buttons */
+  button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+  button:hover {
+    opacity:1;
+  }
+  
+  /* Extra styles for the cancel button */
+  .cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+  }
+  
+  /* Float cancel and signup buttons and add an equal width */
+  .cancelbtn, .signupbtn {
+    float: left;
+    width: 50%;
+  }
+  
+  /* Add padding to container elements */
+  .signupcontainer {
+    padding: 16px;
+    margin: 10%;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #474e5d;
+    padding-top: 50px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* Style the horizontal ruler */
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+   
+  /* The Close Button (x) */
+  .signupclose {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+    margin: 5% auto;
+  }
+  
+  .signupclose:hover,
+  .signupclose:focus {
+    color: #f44336;
+    cursor: pointer;
+  }
+  
+  /* Clear floats */
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  /* Change styles for cancel button and signup button on extra small screens */
+  @media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+  }
+  /* signup closed */
+
+  /* login page */
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+  }
+  
+  img.avatar {
+    width: 40%;
+    border-radius: 50%;
+  }
+  
+  .containerlogin {
+    padding: 30px;
+    margin: 10%;
+  }
+  
+  span.psw2 {
+    float: right;
+    padding-top: 16px;
+  }
+  
+  /* The Modal (background) */
+  .modallogin {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+  }
+  
+  /* Modal Content/Box */
+  .modallogin-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 60%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button (x) */
+  .closelogin {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .closelogin:hover,
+  .closelogin:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw2 {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 50%;
+    }
+  }
+  /* login closed */
+
+
+  /* Include the padding and border in an element's total width and height */
+  * {
+    box-sizing: border-box;
+  }
+  .centered{
+      margin-top: 30vh;
+      margin-left: 10vh;
+      margin-right: 10vh;
+      border:#555 5px solid;
+
+  }
+  h2{
+      color: #555;
+  }
+  /* Remove margins and padding from the list */
+  ul {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', serif;
+  }
+  
+  /* Style the list items */
+  ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    list-style-type: none;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+    font-family: 'Roboto Slab', serif;
+    
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Set all odd list items to a different color (zebra-stripes) */
+  ul li:nth-child(odd) {
+    background: #f9f9f9;
+    font-family: 'Roboto Slab', serif;
+  }
+  
+  /* Darker background-color on hover */
+  ul li:hover {
+    background: #ddd;
+  }
+  
+  /* When clicked on, add a background color and strike out text */
+  ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+  }
+  
+  /* Add a "checked" mark when clicked on */
+  ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+  }
+  
+  /* Style the close button */
+  .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+  }
+  
+  .close:hover {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  /* Style the header */
+  .header {
+    background-color: yellow;
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+  }
+  
+  /* Clear floats after the header */
+  .header:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Style the input */
+  input {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+  }
+  
+  /* Style the "Add" button */
+  .addBtn {
+    padding: 10px;
+    width: 25%;
+    background: #d9d9d9;
+    color: #555;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+  }
+  
+  .addBtn:hover {
+    background-color: #bbb;
+  }
+  /* contact form */
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    width:40%;
+    margin-top: 12px;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Style the container/contact section */
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10%;
+    margin-top: 14vh;
+      margin-left: 14vh;
+      margin-right: 14vh;
+  }
+  /* chatbot -------------------------------*/
+  /* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  background-color: teal;
+  font-size: 24px;
+  color: white;
+  padding: 4px 4px;
+  border-radius: 20px;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 15px;
+  right: 18px;
+  width: 80px;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #837e7e;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 80%;
+  margin-left: 4vh;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+  /* footer --------------------------------------------*/
+  .footer{
+      background-color: black;
+      color: white;
+      padding: 10px;
+      text-align: center; 
+      margin-top: 15vh;
+      height: 20vh;
+  }
+  .followheading{
+    font-size: 40px;
+    font-family: 'Akaya Kanadaka', cursive;
+    color: white;
+    padding: 30;
+    position:fixed;
+  }
+  .centerdiv{
+      margin-top: 5vh;
+    height:10px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+  }
+  .centerdiv a{
+    height:50px;
+    width:50px;
+    background-color:#ecf0f1;
+    border-radius: 50px;
+    text-align: center;
+    margin:10px;
+    line-height: 51px;
+    box-shadow:1px 4px 2px 2px #7f8c8d;
+  }
+  .centerdiv a i{
+    transition: all 0.3s linear;
+  }
+  .centerdiv a:hover i{
+     transform: scale(2);
+  }
+  .fa-github{
+    color: black;
+  }
+  .fa-linkedin{
+    color:blue;
+  }
+  .fa-quora{
+    color: red;
+  }
